@@ -1,2 +1,2 @@
 # PepAMD
-peptide-adjuvant-docking-MD
+Peptide-Adjuvant-docking-MD
