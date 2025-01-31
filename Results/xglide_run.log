@@ -1,0 +1,196 @@
+========================================
+Job Info...
+
+--------------------------------------------------------------------------------
+JobId          : TII-MAC-CPATEL-0-679cb419
+Name           : xglide_run
+Program        : XGlide
+Version        : 2024-4 build 118
+Host           : TII-MAC-CPATEL.local
+Dir            : /Users/chiragpatel/Desktop/PepAMD
+HostEntry      : localhost
+JobHost        : TII-MAC-CPATEL.local
+JobDir         : /Users/chiragpatel/.schrodinger/tmp/xglide_run
+JobSchrodinger : /opt/schrodinger/suites2024-4
+Commandline    : /opt/schrodinger/suites2024-4/run xglide.py xglide_run.inp -OVERWRITE -HOST localhost:4 -NJOBS 4 -TMPLAUNCHDIR
+StartTime      : 2025-01-31-15:29:31
+--------------------------------------------------------------------------------
+========================================
+
+======================================================================
+                                XGlide                                
+           Copyright Schrodinger, LLC. All rights reserved.           
+======================================================================
+
+XGlide starting at Fri Jan 31 15:29:41 2025
+
+
+------------
+ Parameters 
+------------
+Input structures
+    Receptors:
+        2a0z.maegz
+    Ligands:
+        compound.smi
+Align structures:                       False
+Max. ligand atoms:                      90
+Min. ligand atoms:                      12
+Exclude ions:                           True
+Exclude amino acids:                    False
+Run protein preparation:                False
+Run LigPrep:                            False
+Use SiteMap for grid centers:           True
+    Maximum number of sites:            1
+    Use sites for all grid centers:     False
+Glide Grid Generation
+    Grid center specification:          SELF
+    Grid size specification:            26.0
+    Grid size buffer:                   0.0
+    RECEP_VSCALE                        1.0
+    RECEP_CCUT                          0.25
+    INNERBOX                            10
+Glide Docking
+    LIG_VSCALE                          0.8
+    POSES_PER_LIG                       1
+    WRITE_XP_DESC                       FALSE
+    COMPRESS_POSES                      TRUE
+    POSE_OUTTYPE                        poseviewer
+    PRECISION                           HTVS
+Number of ligand subsets:               4
+Native docking only:                    False
+Cutoff for a 'good' RMSD:               2.0
+Merge subset docking results:           True
+Run with increased verbosity:           False
+
+
+---------
+ SiteMap 
+---------
+
+Running subjobs on hosts:
+  localhost (Max: 4)
+Number of jobs:       1
+Max retries per job:  0
+Max allowed failures: unlimited
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+0 1 0 | launched  TII-MAC-CPATEL-0-679cb42f xglide_run__2a0z__sitemap localhost [TII-MAC-CPATEL]
+1 0 0 | finished  TII-MAC-CPATEL-0-679cb42f xglide_run__2a0z__sitemap localhost [TII-MAC-CPATEL]
+
+All jobs have completed.
+
+1 of 1 job(s) succeeded; 0 job(s) failed.
+
+Archiving the SiteMap surface files...
+
+
+-----------------------
+ Glide Grid Generation 
+-----------------------
+
+
+Determining the center(s) for each grid from the
+associated ligand or SiteMap site(s).
+Grid center X,Y,Z = (    5.490866,  -18.485963,   24.031193) for '2a0z'
+
+Running subjobs on hosts:
+  localhost (Max: 4)
+Number of jobs:       1
+Max retries per job:  0
+Max allowed failures: unlimited
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+0 1 0 | launched  TII-MAC-CPATEL-0-679cb459 xglide_run__2a0z__grid localhost [TII-MAC-CPATEL]
+1 0 0 | finished  TII-MAC-CPATEL-0-679cb459 xglide_run__2a0z__grid localhost [TII-MAC-CPATEL]
+
+All jobs have completed.
+
+1 of 1 job(s) succeeded; 0 job(s) failed.
+
+
+
+----------------------
+ Glide Ligand Docking 
+----------------------
+
+Running subjobs on hosts:
+  localhost (Max: 4)
+Number of jobs:       3
+Max retries per job:  0
+Max allowed failures: unlimited
+Verbosity:            normal
+
+Starting JobDJ...
+
+Keep one job on driver host: False
+JobDJ columns:
+  C: Number of completed subjobs
+  A: Number of active subjobs (e.g., submitted, running)
+  W: Number of waiting/pending subjobs
+
+C A W | Activity  JobId  JobName  JobHost
+- - - | --------- -----------------------
+0 1 2 | launched  TII-MAC-CPATEL-0-679cb498 xglide_run__2a0z__ligsubset-1__dock localhost [TII-MAC-CPATEL]
+0 2 1 | launched  TII-MAC-CPATEL-0-679cb4a3 xglide_run__2a0z__ligsubset-2__dock localhost [TII-MAC-CPATEL]
+0 3 0 | launched  TII-MAC-CPATEL-0-679cb4ae xglide_run__2a0z__ligsubset-3__dock localhost [TII-MAC-CPATEL]
+1 2 0 | finished  TII-MAC-CPATEL-0-679cb4a3 xglide_run__2a0z__ligsubset-2__dock localhost [TII-MAC-CPATEL]
+2 1 0 | finished  TII-MAC-CPATEL-0-679cb498 xglide_run__2a0z__ligsubset-1__dock localhost [TII-MAC-CPATEL]
+3 0 0 | finished  TII-MAC-CPATEL-0-679cb4ae xglide_run__2a0z__ligsubset-3__dock localhost [TII-MAC-CPATEL]
+
+All jobs have completed.
+
+3 of 3 job(s) succeeded; 0 job(s) failed.
+
+
+
+--------------
+ RMSD Results 
+--------------
+
+Receptor                 Ligand [file (index,title)]           RMSD   GScore
+--------------------------------------------------------------------------------
+2a0z                     compound (1, '')                       ---    -4.81
+2a0z                     compound (2, '')                       ---    -3.35
+
+Summary results...
+
+Receptor                  Scal     %Docked  %RefDocked      AveRMS %RefCorrect
+-------------------------------------------------------------------------------
+2a0z                       0.8       40.00         ---         ---         ---
+
+
+Merging the Glide output files...
+    Warning: Subset pose file 'xglide_run__2a0z__ligsubset-2__dock_pv.maegz' is missing.
+    Warning: Subset pose file 'xglide_run__2a0z__ligsubset-3__dock_pv.maegz' is missing.
+
+    Merging files...
+        xglide_run__2a0z__ligsubset-1__dock_pv.maegz
+    The merged output pose file is 'xglide_run__2a0z__dock_pv.maegz'
+    Individual subjob pose files are archived in 'xglide_run__2a0z__dock_subjob_poses.zip'.
+
+Subjob log files combined into archive 'xglide_run_subjob-logs.tar.gz'.
+
+
+XGlide terminating normally at Fri Jan 31 15:32:28 2025
+
